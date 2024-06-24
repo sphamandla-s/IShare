@@ -7,7 +7,7 @@ import ToggleTheme from '../shared/ToggleTheme'
 import { spaces_links } from '@/constants'
 import User from '../shared/User'
 
-export default function () {
+export default  function SpacesHeader() {
     return (
         <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 overflow-hidden">
 

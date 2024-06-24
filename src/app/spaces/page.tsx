@@ -1,19 +1,7 @@
-'use client'
+import SpacesHeader from "@/components/spaces/SpacesHeader";
+import { spaces } from "@/constants";
+import Image from "next/image";
 
-import SpacesHeader from '@/components/spaces/SpacesHeader';
-import SpacesMobileNav from '@/components/spaces/SpacesMobileNav';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Input } from '@/components/ui/input';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { spaces } from '@/constants';
-import { useUser } from '@clerk/nextjs';
-import { Menu, Moon, Search, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import Image from 'next/image';
-import Link from 'next/link'
-import React from 'react'
 
 export default function Spaces() {
   
@@ -23,9 +11,6 @@ export default function Spaces() {
             <SpacesHeader />
 
 
-            <div className=' mt-8'>
-
-            </div>
             <div className="flex flex-wrap gap-8 mt-8 justify-center">
                 {spaces.map(space => (
                     <div key={space.id} className="bg-white dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden w-full sm:w-60 md:w-80 lg:w-1/4">
