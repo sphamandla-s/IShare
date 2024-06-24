@@ -17,6 +17,25 @@ export const NAV_LINKS = [
     },
 ]
 
+export const spaces_links = [
+    {
+        title: "Dashboard",
+        href: "/dashboard"
+    },
+    {
+        title: "Space Seeker",
+        href: "/seeker"
+    },
+    {
+        title: "Space Provider",
+        href: "/provider"
+    },
+    {
+        title: "Community",
+        href: "/community"
+    },
+]
+
 export const  spaces = [
     {
         id: 1,
