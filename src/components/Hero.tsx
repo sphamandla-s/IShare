@@ -33,14 +33,14 @@ export default function Hero() {
                             alt='about-image'
                             height={400}
                             width={400}
-                            className=' object-cover border-4'
+                            className=' object-cover'
                         />
                         <Image
                             src='/shridhar-gupta-dZxQn4VEv2M-unsplash.jpg'
                             alt='about-image'
                             height={300}
                             width={300}
-                            className='absolute top-[70%] left-1/2 border-4 object-cover hidden lg:block'
+                            className='absolute top-[70%] left-1/2 object-cover hidden lg:block'
                         />
 
                     </div>

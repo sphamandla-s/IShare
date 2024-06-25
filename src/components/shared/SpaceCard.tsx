@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 
 
-export default function SingleSpaceCard({
+export default function SpaceCard({
     id,
     title,
     description,

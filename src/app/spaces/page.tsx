@@ -1,32 +1,27 @@
+import SpaceCard from "@/components/shared/SpaceCard";
 import SpacesHeader from "@/components/spaces/SpacesHeader";
 import { spaces } from "@/constants";
-import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Spaces() {
-  
 
     return (
         <main className=' container mx-auto  py-4'>
             <SpacesHeader />
-
-
-            <div className="flex flex-wrap gap-8 mt-8 justify-center">
+            <div className="mt-8">
+                <Link href="/search">
+                <button className='mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition'>
+                    Advanced Search
+                </button>
+                </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
                 {spaces.map(space => (
-                    <div key={space.id} className="bg-white dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden w-full sm:w-60 md:w-80 lg:w-1/4">
-                        <Image
-                            src={space.image}
-                            alt={space.title}
-                            width={320}
-                            height={200}
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <h3 className="text-2xl font-bold mb-2">{space.title}</h3>
-                            <p className="text-gray-600 dark:text-gray-400 mb-4">{space.description}</p>
-                            <span className="text-primary-blue dark:text-primary-green font-semibold">{space.location}</span>
-                        </div>
-                    </div>
+                    <SpaceCard id={space.id} title={space.title}
+                        description={space.description} image={space.image}
+                        location={space.location} price={space.price}
+                        features={space.features} type={space.type} />
                 ))}
             </div>
         </main>

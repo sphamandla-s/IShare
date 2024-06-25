@@ -14,7 +14,7 @@ export default function page() {
                 <div className=''>
                    <Listings data={spaces} />
                 </div>
-                <div>
+                <div className='hidden md:flex'>
                     Map
                 </div>
             </div>
