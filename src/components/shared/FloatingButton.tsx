@@ -58,21 +58,12 @@ export default function FloatingButton() {
             )}
 
 
-            <TooltipProvider>
-                <Tooltip>
-                    <TooltipTrigger asChild>
-                        <button
-                            className="relative flex items-center justify-center w-12 h-12 bg-[#F0932B] text-white rounded-full transition-transform transform hover:scale-105 active:scale-95 shadow-lg"
-                            onClick={() => setIsOpen(!isOpen)}
-                        >
-                            {isOpen ? <X className="h-6 w-6" /> : <Plus className="h-6 w-6" />}
-                        </button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Advance Menu</p>
-                    </TooltipContent>
-                </Tooltip>
-            </TooltipProvider>
+            <button
+                className="relative flex items-center justify-center w-12 h-12 bg-[#F0932B] text-white rounded-full transition-transform transform hover:scale-105 active:scale-95 shadow-lg"
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                {isOpen ? <X className="h-6 w-6" /> : <Plus className="h-6 w-6" />}
+            </button>
 
 
 
