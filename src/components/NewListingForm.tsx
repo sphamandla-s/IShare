@@ -25,11 +25,9 @@ function NewListingForm() {
             spaceType: undefined,
             description: "",
             contactInfo: "",
-            availableFrom: "",
-            duration: "",
+            availableFrom: undefined,
             size: "",
             rules: "",
-            floorPlan: null,
             images: null,
         },
     })
@@ -104,16 +102,12 @@ function NewListingForm() {
                     </CustomFormField>
 
                     <CustomFormField
-                        fieldType={FormFieldType.SELECT}
-                        control={form.control}
-                        name="duration"
-                        label="Duration"
-                        placeholder="Select Duration"
-                    >
-                        <SelectItem value="daily">Daily</SelectItem>
-                        <SelectItem value="weekly">Weekly</SelectItem>
-                        <SelectItem value="monthly">Monthly</SelectItem>
-                    </CustomFormField>
+                    fieldType={FormFieldType.DATE_PICKER}
+                    control={form.control}
+                    name="availableFrom"
+                    label="Available From"
+                    placeholder="Select Date"
+                />
                 </div>
 
                 <CustomFormField
@@ -132,13 +126,7 @@ function NewListingForm() {
                     placeholder="Email or phone number"
                 />
 
-                <CustomFormField
-                    fieldType={FormFieldType.DATE_PICKER}
-                    control={form.control}
-                    name="availableFrom"
-                    label="Available From"
-                    placeholder="Select Date"
-                />
+                
 
                 {/* <CustomFormField
                     fieldType={FormFieldType.MULTI_SELECT}
